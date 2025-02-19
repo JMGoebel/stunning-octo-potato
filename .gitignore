@@ -124,4 +124,7 @@ dmypy.json
 cython_debug/
 
 # Index
-index
+index/
+
+# Paper
+papers/

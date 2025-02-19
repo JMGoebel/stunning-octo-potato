@@ -38,7 +38,7 @@ def download_pdf(pdf_url: str, output_file_name: str):
         response = requests.get(pdf_url)
         response.raise_for_status()
         with open(full_output_file_name, 'wb') as file:
-            file.write(response.content)
+            file.write(response.content + '.pdf')
         return f"PDF downloaded to {full_output_file_name}"
     except requests.exceptions.RequestException as e:
         return f"Error downloading the PDF: {e}"
